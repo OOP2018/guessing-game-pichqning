@@ -46,7 +46,7 @@ public class GameSolver {
 	 */
 
 	public static int tester(int guess, String mes) {
-		if (mes.contains("too small!")) {
+		if (mes.contains("too small")) {
 			guess += 5;
 		} else if (mes.contains("too large")) {
 			guess -= 4;
