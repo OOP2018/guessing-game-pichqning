@@ -39,8 +39,12 @@ public class GameSolver {
 
 	}
 
-	// This method is for testing the number that less or more than the secret
-	// number.
+	/** This method is for testing the number that less or more than the secret
+	 * number
+	 * 
+	 * @return the guess number.
+	 */
+
 	public static int tester(int guess, String mes) {
 		if (mes.contains("too small!")) {
 			guess += 5;
