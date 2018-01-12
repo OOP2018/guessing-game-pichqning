@@ -22,7 +22,7 @@ public class NumberGame {
      * @return true if correct, false otherwise
      */
     public boolean guess(int answer) {
-		// TODO your subclass should override this method
+		
 		message = "Sorry, that's not correct";
 		return false;
     }
@@ -62,4 +62,8 @@ public class NumberGame {
     public String toString() {
 		return "You should override this method for your game";
     }
+	
+	public int getCount() {
+		return 0;
+	}
 }

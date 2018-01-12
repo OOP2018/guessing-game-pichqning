@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class GameConsole {
 
-	/** play the game. */
+	/** play the game.*/
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
 		
@@ -13,12 +13,20 @@ public class GameConsole {
 		System.out.println( game.toString() );
 		
 		// This is just an example.
-		System.out.println( game.getMessage() );
+		int guess = 0;
+		while(true) {
 		System.out.print("Your answer? ");
-		int guess = console.nextInt();
+		guess = console.nextInt();
 		boolean correct = game.guess(guess);
-		System.out.println( game.getMessage() );
+		if ( correct == true ) {
+			break;
+		}
+		System.out.println( game.getMessage() ); 
+		if (correct == false) continue;
 		return guess;
 	}
+		System.out.println( game.getMessage() ); 
+		return guess;
 	
+}
 }
