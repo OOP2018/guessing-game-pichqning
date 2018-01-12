@@ -13,7 +13,7 @@ public class NorningGame extends NumberGame {
 	private int upperBound;
 	
 	public int getUpperBound() {
-		return upperBound;
+		return this.upperBound;
 	}
 
 	//*number from random.
@@ -54,11 +54,12 @@ public class NorningGame extends NumberGame {
 			return true;
 		}
 		else if ( number < secret ) {
-			setMessage("It's too less")	;
+			setMessage("It's too less!");
 			return false;
 		}
 		else if ( number > secret ) {
 			setMessage("It's too much!");
+			
 			return false;
 		}
 		return false;
