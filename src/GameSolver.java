@@ -8,18 +8,23 @@ import java.util.Random;
  */
 
 public class GameSolver {
-	Random ai = new Random();
 
 	/** play the game. */
 	public int play(NumberGame game) {
 		// describe the game
 		System.out.println(game.toString());
 
-		int guess = 0;
-		System.out.print("Your answer? ");
-		guess = ai.nextInt(game.getUpperBound()) + 0;
+		int guess;
+		
+		//use max and min value for keep the range of random number that we use bisection logic. 
+		int max = game.getUpperBound();
+		int min = 1;
 
 		while (true) {
+			
+			guess = (max + min) / 2 ;
+			//Bisection method.
+			
 			System.out.print("Your answer? ");
 			System.out.println(guess);
 			boolean correct = game.guess(guess);
@@ -29,27 +34,16 @@ public class GameSolver {
 			}
 			System.out.println(game.getMessage());
 			if (correct == false) {
-				guess = tester(guess, game.getMessage());
+				if (game.getMessage().contains("too small")) {
+					min = guess;
+					
+				} else if (game.getMessage().contains("too large")) {
+					max = guess;
+			
+				}
+				
 				continue;
 			}
-			return guess;
-		}
-		System.out.println(game.getMessage());
-		return guess;
-
-	}
-
-	/** This method is for testing the number that less or more than the secret
-	 * number
-	 * 
-	 * @return the guess number.
-	 */
-
-	public static int tester(int guess, String mes) {
-		if (mes.contains("too small")) {
-			guess += 5;
-		} else if (mes.contains("too large")) {
-			guess -= 4;
 		}
 		return guess;
 

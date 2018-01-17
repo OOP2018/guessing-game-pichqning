@@ -9,7 +9,7 @@ public class Main {
 
 		// upper limit for secret number in guessing game
 		int upperBound = 100;
-		NumberGame game = new ParkGame(upperBound);
+		NumberGame game = new NorningGame(upperBound);
 		GameSolver ui = new GameSolver();
 		int solution = ui.play(game);
 		System.out.println("play() returned " + solution);

@@ -11,29 +11,28 @@ import java.util.Random;
  */
 
 public class NorningGame extends NumberGame {
-	// *Max value for secret number.
+	/**Max value for secret number**/
 	private int upperBound;
 
+	/**Get max value for secret number from Main class**/
 	public int getUpperBound() {
 		return this.upperBound;
 	}
 
-	// *number from random.
+	/**number from random**/
 	private int secret;
 
-	// *Count how many times of guessing the secret number.
+	/**Count how many times of guessing the secret number.**/
 	private int guessing;
 
 	@Override
+	/**Amount round that player has guessing.**/
 	public int getCount() {
 		return guessing;
 	}
 
-	public NorningGame() {
 
-	}
-
-	/*
+	/**
 	 * Initialize a new game.
 	 * 
 	 * @param upperBound is max value for guessing.
