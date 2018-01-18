@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class GameSolver {
 
-	/** play the game. */
+	/** this will solve and return the secret number automatic.*/
 	public int play(NumberGame game) {
 		// describe the game
 		System.out.println(game.toString());
