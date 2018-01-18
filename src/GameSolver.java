@@ -25,14 +25,11 @@ public class GameSolver {
 			guess = (max + min) / 2 ;
 			//Bisection method.
 			
-			System.out.print("Your answer? ");
-			System.out.println(guess);
 			boolean correct = game.guess(guess);
 
 			if (correct == true) {
 				break;
 			}
-			System.out.println(game.getMessage());
 			if (correct == false) {
 				if (game.getMessage().contains("too small")) {
 					min = guess;
