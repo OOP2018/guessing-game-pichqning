@@ -22,8 +22,8 @@ public class GameSolver {
 
 		while (true) {
 			
-			guess = (max + min) / 2 ;
-			//Bisection method.
+			guess = min + (max - min) / 2 ;
+			//Bisection method find the midpoint.
 			
 			boolean correct = game.guess(guess);
 
