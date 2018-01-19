@@ -18,7 +18,7 @@ public class GameSolver {
 		
 		//use max and min value for keep the range of random number that we use bisection logic. 
 		int max = game.getUpperBound();
-		int min = 1;
+		int min = 0;
 
 		while (true) {
 			
@@ -41,6 +41,7 @@ public class GameSolver {
 				
 				continue;
 			}
+		
 		}
 		return guess;
 
