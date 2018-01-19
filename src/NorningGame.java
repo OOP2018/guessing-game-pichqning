@@ -26,7 +26,11 @@ public class NorningGame extends NumberGame {
 	private int guessing;
 
 	@Override
-	/**Amount round that player has guessing.**/
+	/**
+	 * Amount round that player has guessing.
+	 * @return guessing 
+	 * 
+	 **/
 	public int getCount() {
 		return guessing;
 	}
