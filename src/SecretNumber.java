@@ -1,4 +1,8 @@
 import java.util.Random;
+/**
+* For random the secret number.
+* @author Pichaaun Popukdee
+*/
 
 public class SecretNumber extends java.util.Observable {
 private int secret;
