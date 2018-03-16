@@ -10,8 +10,7 @@ import java.util.Observable;
 
 /**
  * A Controller for a window that shows the value of a Counter.
- * This has only one component (but you can add more components),
- * so write it in code instead of FXML.
+ * @author Pichaaun Popukdee
  *
  */
 public class CounterView implements java.util.Observer {
@@ -35,7 +34,6 @@ public class CounterView implements java.util.Observer {
 		stage = new Stage();
 		// components and containers for our window
 		HBox root = new HBox();
-		//TODO Set some padding around the HBox
 		root.setPadding(new Insets(10));
 
 		root.setAlignment(Pos.CENTER);
