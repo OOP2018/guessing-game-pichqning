@@ -25,7 +25,6 @@ public class NorningGame extends NumberGame {
 	/**Count how many times of guessing the secret number.**/
 	private int guessing;
 
-	@Override
 	/**
 	 * Amount round that player has guessing.
 	 * @return guessing 
