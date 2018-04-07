@@ -20,7 +20,9 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-	Counter counter = new Counter();
+
+		Counter counter = new Counter();
+		SecretNumber secretNumber = new SecretNumber();
 
 		try {
 			URL url = getClass().getResource("consolefx.fxml");
@@ -37,7 +39,7 @@ public class Main extends Application {
 			Controller controller = loader.getController();
 
 			// Dependency Injection:
-			controller.setSecret(999);
+			controller.setSecret(secretNumber);
 			controller.setCounter(counter);
 
 
@@ -51,9 +53,12 @@ public class Main extends Application {
 			e.printStackTrace();
 			return;
 		}
-		
 		CounterView view2 = new CounterView(counter);
 		counter.addObserver(view2);
 		view2.run();
+
+		ResultView view = new ResultView(secretNumber);
+		secretNumber.addObserver(view);
+		view.run();
 	}
 }

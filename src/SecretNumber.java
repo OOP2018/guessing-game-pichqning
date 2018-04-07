@@ -1,3 +1,4 @@
+
 import java.util.Random;
 /**
 * For random the secret number.
@@ -13,7 +14,7 @@ public SecretNumber() {
         }
 
 public void random() {
-        secret = ran.nextInt();
+        secret = ran.nextInt(999+0);
         setChanged();
         notifyObservers();
         }
